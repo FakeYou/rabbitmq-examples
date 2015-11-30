@@ -1,0 +1,12 @@
+{
+    "name": "andre/image_resize",
+    "require": {
+        "videlalvaro/php-amqplib": "^2.6"
+    },
+    "authors": [
+        {
+            "name": "Andre Nanninga",
+            "email": "andre@nannin.ga"
+        }
+    ]
+}
