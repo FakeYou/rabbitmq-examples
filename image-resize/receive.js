@@ -28,50 +28,50 @@ amqp.connect('amqp://localhost', function(err, conn) {
 					return path.join(dir, basename + '-' + extra + ext);
 				}
 
-				image.contain(256, 256).write(getName('basic'));
+				image.cover(256, 256).write(getName('basic'));
 
 				setTimeout(function() {
-					console.log('Writing image ' + getName('small'));
+					console.log('Writing image ' + path.basename(getName('small')));
 					image.clone().write(getName('small'));
 				}, 1000);
 
 				setTimeout(function() {
-					console.log('Writing image ' + getName('bw'));
+					console.log('Writing image ' + path.basename(getName('bw')));
 					image.clone().greyscale().write(getName('bw'));
 				}, 2000);
 
 				setTimeout(function() {
-					console.log('Writing image ' + getName('invert'));
+					console.log('Writing image ' + path.basename(getName('invert')));
 					image.clone().invert().write(getName('invert'));
 				}, 3000);
 
 				setTimeout(function() {
-					console.log('Writing image ' + getName('rotate'));
+					console.log('Writing image ' + path.basename(getName('rotate')));
 					image.clone().rotate(180).write(getName('rotate'));
 				}, 4000);
 
 				setTimeout(function() {
-					console.log('Writing image ' + getName('sepia'));
+					console.log('Writing image ' + path.basename(getName('sepia')));
 					image.clone().sepia().write(getName('sepia'));
 				}, 5000);
 
 				setTimeout(function() {
-					console.log('Writing image ' + getName('darken'));
+					console.log('Writing image ' + path.basename(getName('darken')));
 					image.clone().brightness(-0.5).write(getName('darken'));
 				}, 6000);
 
 				setTimeout(function() {
-					console.log('Writing image ' + getName('lighten'));
+					console.log('Writing image ' + path.basename(getName('lighten')));
 					image.clone().brightness(0.5).write(getName('lighten'));
 				}, 7000);
 
 				setTimeout(function() {
-					console.log('Writing image ' + getName('dither'));
+					console.log('Writing image ' + path.basename(getName('dither')));
 					image.clone().dither565().write(getName('dither'));
 				}, 8000);
 
 				setTimeout(function() {
-					console.log('Writing image ' + getName('poster'));
+					console.log('Writing image ' + path.basename(getName('poster')));
 					image.clone().posterize(3).write(getName('poster'));
 				}, 9000);
 			});
